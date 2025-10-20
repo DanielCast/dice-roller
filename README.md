@@ -19,16 +19,22 @@ Features
 
 Project Structure
 . 
-├── main.py          - FastAPI app entrypoint
+├── main.py          - FastAPI app entrypoint 
+
 ├── utils.py         - Dice logic, RNG, history
+
 ├── static/
+
 │ ├── index.html     -Frontend UI
+
 │ ├── script.js      -Client logic
+
 │ ├── style.css      -Styling
+
 │ └── img/ - Dice images
 
 
-1. Clone the repo git clone <!--PlaceHolder-->
+1. Clone the repo git clone https://github.com/DanielCast/dice-roller
 
 2. Create and activate a virtual environment 
 
@@ -56,8 +62,8 @@ so I suggest either put this in a cloud or if you wanna use it locally use somet
 
 Also check if you need to open ports on router and firewall
 
-5. Open your browser on http://<the ip you used>:<the port you used>
-    <!-- E.g. http://25.10.26.132:8080 -->
+5. Open your browser on http://"the ip you used":"the port you used"
+    E.g. http://25.10.26.132:8080
 
 <--------- USAGE --------->
 
