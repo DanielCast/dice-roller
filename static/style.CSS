@@ -1,0 +1,142 @@
+/* -----------------------------------
+   Global Styles
+----------------------------------- */
+body {
+  background: url('/static/img/DiceRollerBkgNew.png') no-repeat center center fixed;
+  background-size: contain;
+  background-color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0; /* shorthand for top/left/right/bottom:0 */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* -----------------------------------
+   Dice Buttons
+----------------------------------- */
+.die {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.die img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 30px auto;
+  pointer-events: none;
+  transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.die:hover img {
+  filter: drop-shadow(0 0 8px #ff4444);
+}
+
+.die:active img {
+  transform: scale(0.95);
+}
+
+.die .counter {
+  position: relative;
+  bottom: 4px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* -----------------------------------
+   Roll Controls
+----------------------------------- */
+.rollBar {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#rollBtn,
+#resetBtn {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+  margin: 0 8px;
+}
+
+/* Roll button (green) */
+#rollBtn {
+  background: linear-gradient(135deg, #28a745, #218838);
+}
+#rollBtn:hover {
+  background: linear-gradient(135deg, #34d058, #28a745);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+}
+#rollBtn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Reset button (red) */
+#resetBtn {
+  background: linear-gradient(135deg, #a72828, #882121);
+}
+#resetBtn:hover {
+  background: linear-gradient(135deg, #d03434, #a72828);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+}
+#resetBtn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* -----------------------------------
+   Messages / Chat Box
+----------------------------------- */
+#messagesBox {
+  width: 100%;
+  max-width: 60%;
+  height: 500px;
+  margin: 20px auto;
+  padding: 8px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background: #fdfdfd;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#messages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#messages li {
+  border: 3px solid #444;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 6px 0;
+  background: #f9f9f9;
+  color: #222;
+  font-family: sans-serif;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}

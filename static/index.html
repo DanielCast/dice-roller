@@ -1,0 +1,80 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Roller</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <h1>🎲 Dice Roller</h1>
+
+    <!-- Username input section -->
+    <div id="usernameBox">
+        <label for="usernameInput">Username:</label>
+        <input type="text" id="usernameInput" placeholder="Enter your name">
+        <button id="setUsernameBtn">Set</button>
+    </div>
+
+    <!-- Display current username -->
+    <p>Current username: <span id="currentUsername">Anonymous</span></p>
+
+    <!-- Dice selection buttons -->
+    <div id="dice-buttons">
+        <button class="die" data-sides="4">
+            <img src="static/img/dice-d4.png" alt="d4">
+            <span class="counter">d4 (0)</span>
+        </button>
+        <button class="die" data-sides="6">
+            <img src="static/img/dice-d6.png" alt="d6">
+            <span class="counter">d6 (0)</span>
+        </button>
+        <button class="die" data-sides="8">
+            <img src="static/img/dice-d8.png" alt="d8">
+            <span class="counter">d8 (0)</span>
+        </button>
+        <button class="die" data-sides="10">
+            <img src="static/img/dice-d10.png" alt="d10">
+            <span class="counter">d10 (0)</span>
+        </button>
+        <button class="die" data-sides="12">
+            <img src="static/img/dice-d12.png" alt="d12">
+            <span class="counter">d12 (0)</span>
+        </button>
+        <button class="die" data-sides="20">
+            <img src="static/img/dice-d20.png" alt="d20">
+            <span class="counter">d20 (0)</span>
+        </button>
+    </div>
+
+    <!-- Roll controls -->
+    <div class="rollBar">
+        <button id="rollBtn">Roll</button>
+        <label>
+            <input type="checkbox" id="autoReset">
+            Auto-reset after roll
+        </label>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <!-- Scrollable messages box -->
+    <div id="messagesBox">
+        <ul id="messages" class="chat"></ul>
+    </div>
+
+    <!-- Client-side logic -->
+    <script src="static/script.js"></script>
+</body>
+
+</html>
